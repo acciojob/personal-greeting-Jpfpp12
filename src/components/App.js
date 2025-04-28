@@ -16,7 +16,7 @@ const App = () => {
         value={name}
         onChange={handleChange}
       />
-     {name && <p>Hello, {name}!</p>}
+    <p>Hello, {name}!</p>
     </div>
     
   )
