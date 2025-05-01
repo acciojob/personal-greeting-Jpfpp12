@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Greeting = () => {
+const App = () => {
   const [name, setName] = useState('');
 
   return (
@@ -35,4 +35,4 @@ const styles = {
   },
 };
 
-export default Greeting;
+export default App;
