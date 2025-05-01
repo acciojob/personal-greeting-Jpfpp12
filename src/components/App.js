@@ -1,26 +1,38 @@
-import React, { useState } from "react";
-import './../styles/App.css';
+import React, { useState } from 'react';
 
-const App = () => {
-  const [name, setName] = useState("");
-
-  const handleChange = (event) => {
-    setName(event.target.value);
-  };
+const Greeting = () => {
+  const [name, setName] = useState('');
 
   return (
-    <div>
+    <div style={styles.container}>
       {/* Do not remove the main div */}
-  <label htmlFor="nameInput">Enter your name:</label>
+      <h2>Enter your name:</h2>
       <input
-        id="nameInput"
         type="text"
         value={name}
-        onChange={handleChange}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Your name"
+        style={styles.input}
       />
-{name !== "" && <p>Hello, {name}!</p>}
+      {name && <h3 style={styles.greeting}>Hello, {name}!</h3>}
     </div>
   );
 };
+const styles = {
+  container: {
+    fontFamily: 'Arial, sans-serif',
+    padding: '20px',
+    textAlign: 'center',
+  },
+  input: {
+    padding: '10px',
+    fontSize: '16px',
+    marginTop: '10px',
+  },
+  greeting: {
+    marginTop: '20px',
+    color: '#333',
+  },
+};
 
-export default App;
+export default Greeting;
