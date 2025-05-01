@@ -6,14 +6,14 @@ const Greeting = () => {
   return (
     <div style={styles.container}>
       {/* Do not remove the main div */}
-      <h2>Enter your name:</h2>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Your name"
-        style={styles.input}
-      />
+   <label htmlFor="name">Enter your name:</label>
+  <input
+  id="name"
+  type="text"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+  style={styles.input}
+  />
       {name && <h3 style={styles.greeting}>Hello, {name}!</h3>}
     </div>
   );
