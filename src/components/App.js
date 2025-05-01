@@ -6,9 +6,9 @@ const App = () => {
   return (
     <div>
       {/* Do not remove the main div */}
-   <label htmlFor="name">Enter your name:</label>
+   <label htmlFor="Inputname">Enter your name:</label>
   <input
-  id="name"
+  id="Inputname"
   type="text"
   value={name}
   onChange={(e) => setName(e.target.value)}
