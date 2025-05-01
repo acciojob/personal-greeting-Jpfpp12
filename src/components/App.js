@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div>
       {/* Do not remove the main div */}
-     <p>Enter your name:</p>
+  <label htmlFor="nameInput">Enter your name:</label>
       <input
         type="text"
         value={name}
